@@ -1,0 +1,112 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font for headings - Stalions alternative using a decorative font */
+@font-face {
+  font-family: "Stalions";
+  src: local("Cooper Black"), local("Phosphate"), local("Chalkboard SE");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Primary purple from design */
+    --primary: 261 88% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Yellow accent from design */
+    --accent: 57 98% 76%;
+    --accent-foreground: 261 88% 52%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 261 88% 52%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 261 88% 52%;
+    --input: 214 32% 91%;
+    --ring: 261 88% 52%;
+
+    --radius: 0.5rem;
+
+    /* Cream background */
+    --cream: 57 100% 93%;
+
+    /* Design-specific colors */
+    --design-purple: 261 88% 52%;
+    --design-yellow: 57 98% 76%;
+    --design-cream: 57 100% 93%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --primary: 261 88% 52%;
+    --primary-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "Nunito Sans",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  /* Stalions font class for headings */
+  .font-stalions {
+    font-family:
+      "Cooper Black",
+      "Phosphate",
+      "Chalkboard SE",
+      "Impact",
+      cursive,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+}
