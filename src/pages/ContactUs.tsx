@@ -4,12 +4,21 @@ import Footer from "@/components/Footer";
 export default function ContactUs() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <style>
+        {`
+          input::placeholder,
+          textarea::placeholder {
+            color: #621FE9 !important;
+            opacity: 0.5;
+          }
+        `}
+      </style>
       <Header />
 
       <main className="w-full px-4 md:px-16 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
           {/* Title */}
-          <h1 className="text-design-purple font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight mb-8 md:mb-12">
+          <h1 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight mb-8 md:mb-12" style={{ color: '#621FE9' }}>
             Contact Us
           </h1>
 
@@ -26,10 +35,10 @@ export default function ContactUs() {
 
               {/* Contact Email */}
               <div className="flex flex-col gap-0">
-                <p className="text-design-purple font-bold text-2xl md:text-3xl lg:text-[35px] leading-tight underline">
+                <p className="font-bold text-2xl md:text-3xl lg:text-[35px] leading-tight underline" style={{ color: '#621FE9' }}>
                   Mail for more
                 </p>
-                <p className="text-design-purple font-medium text-2xl md:text-3xl lg:text-[35px] leading-tight">
+                <p className="font-medium text-2xl md:text-3xl lg:text-[35px] leading-tight" style={{ color: '#621FE9' }}>
                   designfourpixels@gmail.com
                 </p>
               </div>
@@ -41,7 +50,8 @@ export default function ContactUs() {
               <div className="flex flex-col gap-5">
                 <label
                   htmlFor="name"
-                  className="text-design-purple font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  className="font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  style={{ color: '#621FE9' }}
                 >
                   Name
                 </label>
@@ -49,7 +59,9 @@ export default function ContactUs() {
                   type="text"
                   id="name"
                   placeholder="John Doe"
-                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 border-design-purple bg-white opacity-80 text-design-purple font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-design-purple"
+                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
+                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
 
@@ -57,7 +69,8 @@ export default function ContactUs() {
               <div className="flex flex-col gap-5">
                 <label
                   htmlFor="email"
-                  className="text-design-purple font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  className="font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  style={{ color: '#621FE9' }}
                 >
                   Email
                 </label>
@@ -65,7 +78,9 @@ export default function ContactUs() {
                   type="email"
                   id="email"
                   placeholder="johndoe@gmail.com"
-                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 border-design-purple bg-white opacity-80 text-design-purple font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-design-purple"
+                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
+                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
 
@@ -73,14 +88,17 @@ export default function ContactUs() {
               <div className="flex flex-col gap-5">
                 <label
                   htmlFor="phone"
-                  className="text-design-purple font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  className="font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  style={{ color: '#621FE9' }}
                 >
                   Phone No:
                 </label>
                 <input
                   type="tel"
                   id="phone"
-                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 border-design-purple bg-white opacity-80 text-design-purple font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-design-purple"
+                  className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
+                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
 
@@ -88,14 +106,17 @@ export default function ContactUs() {
               <div className="flex flex-col gap-5">
                 <label
                   htmlFor="description"
-                  className="text-design-purple font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  className="font-bold text-2xl md:text-3xl lg:text-[39px] leading-tight"
+                  style={{ color: '#621FE9' }}
                 >
                   Description
                 </label>
                 <textarea
                   id="description"
                   rows={6}
-                  className="h-[250px] md:h-[330px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 border-design-purple bg-white opacity-80 text-design-purple font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-design-purple resize-none"
+                  className="h-[250px] md:h-[330px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 resize-none"
+                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 ></textarea>
               </div>
             </div>

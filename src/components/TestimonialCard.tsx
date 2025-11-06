@@ -17,7 +17,7 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   if (featured) {
     return (
-      <div className="flex flex-col gap-8 p-8 md:p-12 border-3 border-design-purple rounded-[50px] bg-design-cream w-full max-w-[900px]">
+      <div className="flex flex-col gap-8 p-8 md:p-12 border-3 rounded-[50px] bg-design-cream w-full max-w-[900px]" style={{ borderColor: '#621FE9' }}>
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-6 md:gap-12">
             {avatarUrl && (
@@ -28,7 +28,7 @@ export default function TestimonialCard({
               />
             )}
             {!avatarUrl && (
-              <div className="w-20 h-20 md:w-[86px] md:h-[86px] rounded-full bg-design-purple flex items-center justify-center">
+              <div className="w-20 h-20 md:w-[86px] md:h-[86px] rounded-full flex items-center justify-center" style={{ backgroundColor: '#621FE9' }}>
                 <svg
                   viewBox="0 0 86 86"
                   fill="none"
@@ -44,10 +44,10 @@ export default function TestimonialCard({
               </div>
             )}
             <div>
-              <h4 className="text-design-purple font-bold text-3xl md:text-[46px] leading-tight">
+              <h4 className="font-bold text-3xl md:text-[46px] leading-tight" style={{ color: '#621FE9' }}>
                 {name}
               </h4>
-              <p className="text-design-purple font-medium text-xl md:text-[33px] leading-tight">
+              <p className="font-medium text-xl md:text-[33px] leading-tight" style={{ color: '#621FE9' }}>
                 {designation}
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function TestimonialCard({
             ))}
           </div>
         </div>
-        <p className="text-black text-lg md:text-2xl leading-relaxed text-justify">
+        <p className="text-lg md:text-2xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
           {testimonial}
         </p>
       </div>
@@ -69,21 +69,21 @@ export default function TestimonialCard({
   }
 
   return (
-    <div className="flex flex-col gap-8 p-8 md:p-12 border-2 border-design-purple rounded-[41px] bg-design-cream blur-[4px] opacity-70 w-full max-w-[750px]">
+    <div className="flex flex-col gap-8 p-8 md:p-12 border-2 rounded-[41px] bg-design-cream blur-[4px] opacity-70 w-full max-w-[750px]" style={{ borderColor: '#621FE9' }}>
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-8">
-          <div className="w-[71px] h-[71px] rounded-full bg-design-purple"></div>
+          <div className="w-[71px] h-[71px] rounded-full" style={{ backgroundColor: '#621FE9' }}></div>
           <div>
-            <h4 className="text-design-purple font-bold text-3xl md:text-[38px] leading-tight">
+            <h4 className="font-bold text-3xl md:text-[38px] leading-tight" style={{ color: '#621FE9' }}>
               {name}
             </h4>
-            <p className="text-design-purple font-medium text-xl md:text-[27px] leading-tight">
+            <p className="font-medium text-xl md:text-[27px] leading-tight" style={{ color: '#621FE9' }}>
               {designation}
             </p>
           </div>
         </div>
       </div>
-      <p className="text-black text-base md:text-xl leading-relaxed text-justify">
+      <p className="text-base md:text-xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
         {testimonial}
       </p>
     </div>

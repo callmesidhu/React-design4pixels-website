@@ -106,7 +106,7 @@ export default function Index() {
 
             {/* Hero Content */}
             <div className="flex flex-col items-center gap-6 text-center">
-              <p className="text-gray-400 font-stalions text-3xl md:text-5xl lg:text-[66px] leading-tight opacity-60">
+              <p className="font-stalions text-3xl md:text-5xl lg:text-[66px] leading-tight opacity-60" style={{ color: '#621FE9' }}>
                 Where Every Pixel Tells a Story
               </p>
 
@@ -126,7 +126,7 @@ export default function Index() {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className="text-design-purple font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none pb-2 md:pb-4">
+                    <h1 className="font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none pb-2 md:pb-4" style={{ color: '#621FE9' }}>
                       Level up
                     </h1>
                   </div>
@@ -152,14 +152,15 @@ export default function Index() {
                 </div>
 
                 {/* with */}
-                <h1 className="text-design-purple font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none pb-2 md:pb-4">
+                <h1 className="font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none pb-2 md:pb-4" style={{ color: '#621FE9' }}>
                   with
                 </h1>
               </div>
 
               <h1
-                className="text-design-purple font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none"
+                className="font-stalions text-5xl md:text-7xl lg:text-[174px] leading-none"
                 style={{
+                  color: '#621FE9',
                   WebkitTextStroke: "2px #FFF",
                   paintOrder: "stroke fill",
                 }}
@@ -170,13 +171,29 @@ export default function Index() {
 
             {/* Create Magic Button */}
             <div className="flex items-center justify-center gap-4 md:gap-6 mt-12 md:mt-16">
-              <button className="flex items-center gap-3 md:gap-4 px-8 md:px-12 py-4 md:py-6 border border-design-purple rounded-full hover:bg-design-purple hover:text-white transition-colors transform -rotate-[13deg] hover:rotate-0">
-                <span className="text-design-purple hover:text-white font-semibold text-xl md:text-3xl lg:text-[37px] leading-tight">
+              <button 
+                className="flex items-center gap-3 md:gap-4 px-8 md:px-12 py-4 md:py-6 border rounded-full transform -rotate-[13deg] hover:rotate-0" 
+                style={{ 
+                  borderColor: '#621FE9',
+                  transition: 'all 0.3s ease-in-out'
+                }} 
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#621FE9';
+                  const span = e.currentTarget.querySelector('span');
+                  if (span) span.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  const span = e.currentTarget.querySelector('span');
+                  if (span) span.style.color = '#621FE9';
+                }}
+              >
+                <span className="font-semibold text-xl md:text-3xl lg:text-[37px] leading-tight" style={{ color: '#621FE9', transition: 'color 0.3s ease-in-out' }}>
                   Create Magic
                 </span>
               </button>
               <div className="relative w-16 h-16 md:w-24 md:h-24 lg:w-[95px] lg:h-[95px] flex-shrink-0 transform -rotate-[14deg]">
-                <div className="w-full h-full rounded-full bg-design-purple"></div>
+                <div className="w-full h-full rounded-full" style={{ backgroundColor: '#621FE9' }}></div>
                 <Wand2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-white" />
               </div>
               <img
@@ -194,14 +211,14 @@ export default function Index() {
           className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20"
         >
           <div className="max-w-[1400px] mx-auto">
-            <div className="border-3 border-design-purple/40 rounded-[71px] p-8 md:p-12 lg:p-16">
+            <div className="border-3 rounded-[71px] p-8 md:p-12 lg:p-16" style={{ borderColor: 'rgba(98, 31, 233, 0.4)' }}>
               <div className="flex flex-col items-center gap-8">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full">
-                  <h2 className="text-design-purple font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight">
+                  <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
                     Our Services
                   </h2>
-                  <p className="text-design-purple font-medium text-lg md:text-2xl lg:text-[30px] leading-relaxed opacity-50 text-center md:text-right max-w-md">
+                  <p className="font-medium text-lg md:text-2xl lg:text-[30px] leading-relaxed opacity-50 text-center md:text-right max-w-md" style={{ color: '#621FE9' }}>
                     Here are the wide range of services that we provide
                   </p>
                 </div>
@@ -241,10 +258,10 @@ export default function Index() {
         >
           <div className="max-w-[1400px] mx-auto">
             <div className="flex flex-col gap-6">
-              <h2 className="text-design-purple font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight">
+              <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
                 About Us
               </h2>
-              <p className="text-design-purple font-medium text-lg md:text-2xl lg:text-[30px] leading-relaxed text-justify">
+              <p className="font-medium text-lg md:text-2xl lg:text-[30px] leading-relaxed text-justify" style={{ color: '#621FE9' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
