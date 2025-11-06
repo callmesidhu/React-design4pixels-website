@@ -20,8 +20,8 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-end gap-4">
             <Link
               to="/contact"
-              className="flex items-center gap-2 px-6 py-3 border rounded-full font-semibold text-2xl md:text-3xl hover:text-white transition-colors"
-              style={{ borderColor: '#621FE9', color: '#621FE9' }}
+              className="flex items-center gap-2 px-6 py-3 border rounded-full font-semibold text-2xl md:text-3xl hover:text-white"
+              style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#621FE9'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             >
@@ -31,19 +31,19 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-2 font-semibold opacity-50 text-lg md:text-xl flex-wrap justify-center" style={{ color: '#621FE9' }}>
-              <a href="#" className="hover:opacity-100 transition-opacity">
+              <a href="#" style={{ transition: 'opacity 0.3s ease-in-out' }} className="hover:opacity-100">
                 Linked in
               </a>
               <span style={{ color: '#621FE9' }}>|</span>
-              <a href="#" className="hover:opacity-100 transition-opacity">
+              <a href="#" style={{ transition: 'opacity 0.3s ease-in-out' }} className="hover:opacity-100">
                 Twitter
               </a>
               <span style={{ color: '#621FE9' }}>|</span>
-              <a href="#" className="hover:opacity-100 transition-opacity">
+              <a href="#" style={{ transition: 'opacity 0.3s ease-in-out' }} className="hover:opacity-100">
                 Behance
               </a>
               <span style={{ color: '#621FE9' }}>|</span>
-              <a href="#" className="hover:opacity-100 transition-opacity">
+              <a href="#" style={{ transition: 'opacity 0.3s ease-in-out' }} className="hover:opacity-100">
                 Instagram
               </a>
             </div>
@@ -57,7 +57,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between md:justify-start gap-4 opacity-50" >
           <a
             href="#"
-            className="underline text-base md:text-xl font-medium hover:opacity-100 transition-opacity"
+            className="underline text-base md:text-xl font-medium hover:opacity-100"
+            style={{ transition: 'opacity 0.3s ease-in-out' }}
           >
             Privacy & cookie policy
           </a>

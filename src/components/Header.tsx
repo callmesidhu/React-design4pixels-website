@@ -16,15 +16,15 @@ export default function Header() {
           </Link>
           <Link
             to="#services"
-            className="font-semibold text-lg md:text-xl opacity-50 hover:opacity-100 transition-opacity"
-            style={{ color: '#621FE9' }}
+            className="font-semibold text-lg md:text-xl opacity-50 hover:opacity-100"
+            style={{ color: '#621FE9', transition: 'opacity 0.3s ease-in-out' }}
           >
             Services
           </Link>
           <Link
             to="#about"
-            className="font-semibold text-lg md:text-xl opacity-50 hover:opacity-100 transition-opacity"
-            style={{ color: '#621FE9' }}
+            className="font-semibold text-lg md:text-xl opacity-50 hover:opacity-100"
+            style={{ color: '#621FE9', transition: 'opacity 0.3s ease-in-out' }}
           >
             About Us
           </Link>
@@ -42,8 +42,8 @@ export default function Header() {
         {/* Connect Button */}
         <Link
           to="/contact"
-          className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 border rounded-full font-semibold text-lg md:text-xl hover:text-white transition-colors"
-          style={{ color: '#621FE9', borderColor: '#621FE9' }}
+          className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 border rounded-full font-semibold text-lg md:text-xl hover:text-white"
+          style={{ color: '#621FE9', borderColor: '#621FE9', transition: 'all 0.3s ease-in-out' }}
           onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#621FE9'}
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
         >

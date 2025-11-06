@@ -60,7 +60,7 @@ export default function ContactUs() {
                   id="name"
                   placeholder="John Doe"
                   className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
-                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
                   onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
@@ -79,7 +79,7 @@ export default function ContactUs() {
                   id="email"
                   placeholder="johndoe@gmail.com"
                   className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
-                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
                   onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
@@ -97,7 +97,7 @@ export default function ContactUs() {
                   type="tel"
                   id="phone"
                   className="h-[90px] md:h-[114px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2"
-                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
                   onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 />
               </div>
@@ -115,7 +115,7 @@ export default function ContactUs() {
                   id="description"
                   rows={6}
                   className="h-[250px] md:h-[330px] px-8 md:px-10 py-6 md:py-8 rounded-[36px] border-2 bg-white opacity-80 font-medium text-xl md:text-2xl lg:text-[31px] placeholder:opacity-50 focus:outline-none focus:ring-2 resize-none"
-                  style={{ borderColor: '#621FE9', color: '#621FE9' }}
+                  style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
                   onFocus={(e) => e.target.style.outlineColor = '#621FE9'}
                 ></textarea>
               </div>

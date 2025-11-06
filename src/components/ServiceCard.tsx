@@ -12,7 +12,7 @@ export default function ServiceCard({
   imageSrc,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col justify-between w-full md:w-[314px] h-[363px] p-4 md:p-6 border-2 rounded-3xl bg-white hover:shadow-lg transition-shadow" style={{ borderColor: '#621FE9' }}>
+    <div className="flex flex-col justify-between w-full md:w-[314px] h-[363px] p-4 md:p-6 border-2 rounded-3xl bg-white hover:shadow-lg" style={{ borderColor: '#621FE9', transition: 'box-shadow 0.3s ease-in-out' }}>
       <div className="flex flex-col gap-2">
         {/* Header */}
         <div className="flex items-start justify-between mb-2">
