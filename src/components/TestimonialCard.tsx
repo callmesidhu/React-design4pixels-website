@@ -17,18 +17,18 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   if (featured) {
     return (
-      <div className="flex flex-col border-2 gap-8 p-8 md:p-12 border-3 rounded-[50px] w-full max-w-[900px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
-        <div className="flex items-center justify-between flex-wrap gap-4 ">
-          <div className="flex items-center gap-6 md:gap-12">
+      <div className="flex flex-col border-2 md:border-3 gap-4 sm:gap-6 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 rounded-[35px] sm:rounded-[42px] md:rounded-[50px] w-full max-w-[900px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
+        <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+          <div className="flex items-center gap-4 sm:gap-8 md:gap-10 lg:gap-12">
             {avatarUrl && (
               <img
                 src={avatarUrl}
                 alt={name}
-                className="w-20 h-20 md:w-[86px] md:h-[86px] rounded-full object-cover"
+                className="w-16 h-16 sm:w-[70px] sm:h-[70px] md:w-20 md:h-20 lg:w-[86px] lg:h-[86px] rounded-full object-cover"
               />
             )}
             {!avatarUrl && (
-              <div className="w-20 h-20 md:w-[86px] md:h-[86px] rounded-full flex items-center justify-center" style={{ backgroundColor: '#621FE9' }}>
+              <div className="w-16 h-16 sm:w-[70px] sm:h-[70px] md:w-20 md:h-20 lg:w-[86px] lg:h-[86px] rounded-full flex items-center justify-center" style={{ backgroundColor: '#621FE9' }}>
                 <svg
                   viewBox="0 0 86 86"
                   fill="none"
@@ -44,24 +44,24 @@ export default function TestimonialCard({
               </div>
             )}
             <div>
-              <h4 className="font-bold text-3xl md:text-[46px] leading-tight" style={{ color: '#621FE9' }}>
+              <h4 className="font-bold text-2xl sm:text-3xl md:text-[38px] lg:text-[46px] leading-tight" style={{ color: '#621FE9' }}>
                 {name}
               </h4>
-              <p className="font-medium text-xl md:text-[33px] leading-tight" style={{ color: '#621FE9' }}>
+              <p className="font-medium text-lg sm:text-xl md:text-[28px] lg:text-[33px] leading-tight" style={{ color: '#621FE9' }}>
                 {designation}
               </p>
             </div>
           </div>
-          <div className="flex gap-1">
+          <div className="flex gap-0.5 sm:gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className="w-8 h-8 md:w-10 md:h-10 fill-[#E0C113] text-[#E0C113]"
+                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 fill-[#E0C113] text-[#E0C113]"
               />
             ))}
           </div>
         </div>
-        <p className="text-lg md:text-2xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
           {testimonial}
         </p>
       </div>
@@ -69,21 +69,21 @@ export default function TestimonialCard({
   }
 
   return (
-    <div className="flex flex-col gap-8 p-8 md:p-12 border-2 rounded-[41px] blur-[4px] opacity-70 w-full max-w-[750px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
-      <div className="flex items-center justify-between flex-wrap gap-4">
-        <div className="flex items-center gap-8">
-          <div className="w-[71px] h-[71px] rounded-full" style={{ backgroundColor: '#621FE9' }}></div>
+    <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 p-6 sm:p-8 md:p-10 lg:p-12 border-2 rounded-[35px] sm:rounded-[38px] md:rounded-[41px] blur-[4px] opacity-70 w-full max-w-[750px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
+      <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-4">
+        <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-[71px] md:h-[71px] rounded-full" style={{ backgroundColor: '#621FE9' }}></div>
           <div>
-            <h4 className="font-bold text-3xl md:text-[38px] leading-tight" style={{ color: '#621FE9' }}>
+            <h4 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-[38px] leading-tight" style={{ color: '#621FE9' }}>
               {name}
             </h4>
-            <p className="font-medium text-xl md:text-[27px] leading-tight" style={{ color: '#621FE9' }}>
+            <p className="font-medium text-base sm:text-lg md:text-xl lg:text-[27px] leading-tight" style={{ color: '#621FE9' }}>
               {designation}
             </p>
           </div>
         </div>
       </div>
-      <p className="text-base md:text-xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
+      <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-justify" style={{ color: '#621FE9' }}>
         {testimonial}
       </p>
     </div>

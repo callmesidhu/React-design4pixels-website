@@ -28,9 +28,9 @@ export default function TestimonialsCarousel({
   }, [len]);
 
   return (
-    <div className="w-full flex flex-col items-center gap-6">
+    <div className="w-full flex flex-col items-center gap-4 sm:gap-5 md:gap-6">
       {/* Track: previous | current | next */}
-      <div className="w-full flex items-center justify-center gap-6 overflow-hidden px-2">
+      <div className="w-full flex items-center justify-center gap-3 sm:gap-4 md:gap-6 overflow-hidden px-2 sm:px-3 md:px-4">
         {/* Previous (left, blurred) */}
         <motion.div
           key={`prev-${prev}`}
@@ -41,7 +41,7 @@ export default function TestimonialsCarousel({
           className="hidden md:block flex-shrink-0"
           style={{ filter: "blur(4px)" }}
         >
-          <div className="max-w-[750px]">
+          <div className="max-w-[600px] lg:max-w-[750px]">
             <TestimonialCard
               name={items[prev].name}
               designation={items[prev].designation}
@@ -58,9 +58,9 @@ export default function TestimonialsCarousel({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 w-full sm:w-auto"
           >
-            <div className="mx-auto max-w-[900px]">
+            <div className="mx-auto max-w-full sm:max-w-[600px] md:max-w-[750px] lg:max-w-[900px]">
               <TestimonialCard
                 featured
                 name={items[index].name}
@@ -81,7 +81,7 @@ export default function TestimonialsCarousel({
           className="hidden md:block flex-shrink-0"
           style={{ filter: "blur(4px)" }}
         >
-          <div className="max-w-[750px]">
+          <div className="max-w-[600px] lg:max-w-[750px]">
             <TestimonialCard
               name={items[next].name}
               designation={items[next].designation}
@@ -92,8 +92,8 @@ export default function TestimonialsCarousel({
       </div>
 
       {/* Indicators (progress + dots) */}
-      <div className="flex items-center gap-3">
-        <div className="relative w-[120px] h-[18px] rounded-full border-2" style={{ borderColor: "#621FE9" }}>
+      <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3">
+        <div className="relative w-[80px] sm:w-[100px] md:w-[120px] h-[14px] sm:h-[16px] md:h-[18px] rounded-full border-2" style={{ borderColor: "#621FE9" }}>
           <motion.div
             key={index}
             initial={{ width: 0 }}
@@ -106,7 +106,7 @@ export default function TestimonialsCarousel({
         {Array.from({ length: len }).map((_, i) => (
           <div
             key={i}
-            className="w-5 h-5 rounded-full border-2"
+            className="w-4 h-4 sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 rounded-full border-2"
             style={{ borderColor: "#621FE9", backgroundColor: i === index ? "#621FE9" : "transparent" }}
           />
         ))}
