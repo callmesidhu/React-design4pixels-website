@@ -299,13 +299,19 @@ export default function Index() {
         {/* Quote Section */}
         <section className="px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-10 md:py-16 lg:py-20 mt-8 sm:mt-10 md:mt-16 lg:mt-20">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div className="relative inline-block">
-              <h2 className="text-gray-800 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-[101px] leading-tight px-2">
-                Keep creating until you find your own{" "}
-                <span style={{ color: '#621FE9' }}>audience.</span>
-              </h2>
-              <div className="absolute top-0 left-[10%] sm:left-[15%] md:left-[20%] w-[150px] sm:w-[200px] md:w-[280px] lg:w-[300px] xl:w-[446px] h-[40px] sm:h-[60px] md:h-[80px] lg:h-[90px] xl:h-[126px] border-3 sm:border-4 border-design-yellow rounded-[30px] sm:rounded-[36px] md:rounded-[43px] -z-10"></div>
-            </div>
+            <h2 className="text-gray-800 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-[101px] leading-tight px-2 flex flex-wrap items-center justify-center gap-2 md:gap-3">
+              <span>Keep</span>
+              <span className="relative inline-block">
+                {/* soft yellow shade behind 'creating' */}
+                <span className="relative z-10 px-2 sm:px-3 md:px-4 rounded-[43px] border-4 border-[#FEF689] bg-transparent">creating</span>
+              </span>
+              <span>until</span>
+              <span>you</span>
+              <span>find</span>
+              <span>your</span>
+              <span>own</span>
+              <span style={{ color: '#621FE9' }}>audience.</span>
+            </h2>
           </div>
         </section>
       </main>

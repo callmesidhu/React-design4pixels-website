@@ -22,8 +22,14 @@ export default function Footer() {
               to="/contact"
               className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border rounded-full font-semibold text-xl sm:text-2xl md:text-3xl hover:text-white"
               style={{ borderColor: '#621FE9', color: '#621FE9', transition: 'all 0.3s ease-in-out' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#621FE9'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#621FE9';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = '#621FE9';
+              }}
             >
               Let's Talk
               <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2} />
