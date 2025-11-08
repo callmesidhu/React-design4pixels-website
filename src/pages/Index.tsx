@@ -210,11 +210,11 @@ export default function Index() {
           id="services"
           className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20"
         >
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-[1400px] border-2 rounded-[70px] bg-white hover:shadow-lg" style={{ borderColor: '#621FE9', transition: 'box-shadow 0.3s ease-in-out' }}>
             <div className="border-3 rounded-[71px] p-8 md:p-12 lg:p-16" style={{ borderColor: 'rgba(98, 31, 233, 0.4)' }}>
               <div className="flex flex-col items-center gap-8">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full ">
                   <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
                     Our Services
                   </h2>
