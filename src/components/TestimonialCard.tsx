@@ -17,8 +17,8 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   if (featured) {
     return (
-      <div className="flex flex-col gap-8 p-8 md:p-12 border-3 rounded-[50px] bg-design-cream w-full max-w-[900px]" style={{ borderColor: '#621FE9' }}>
-        <div className="flex items-center justify-between flex-wrap gap-4">
+      <div className="flex flex-col border-2 gap-8 p-8 md:p-12 border-3 rounded-[50px] w-full max-w-[900px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
+        <div className="flex items-center justify-between flex-wrap gap-4 ">
           <div className="flex items-center gap-6 md:gap-12">
             {avatarUrl && (
               <img
@@ -69,7 +69,7 @@ export default function TestimonialCard({
   }
 
   return (
-    <div className="flex flex-col gap-8 p-8 md:p-12 border-2 rounded-[41px] bg-design-cream blur-[4px] opacity-70 w-full max-w-[750px]" style={{ borderColor: '#621FE9' }}>
+    <div className="flex flex-col gap-8 p-8 md:p-12 border-2 rounded-[41px] blur-[4px] opacity-70 w-full max-w-[750px]" style={{ borderColor: '#621FE9', backgroundColor: '#FFFDDD' }}>
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-8">
           <div className="w-[71px] h-[71px] rounded-full" style={{ backgroundColor: '#621FE9' }}></div>

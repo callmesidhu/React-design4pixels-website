@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import { Wand2 } from "lucide-react";
 
 export default function Index() {
@@ -180,12 +180,12 @@ export default function Index() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#621FE9';
                   const span = e.currentTarget.querySelector('span');
-                  if (span) span.style.color = 'white';
+                  if (span) (span as HTMLElement).style.color = 'white';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent';
                   const span = e.currentTarget.querySelector('span');
-                  if (span) span.style.color = '#621FE9';
+                  if (span) (span as HTMLElement).style.color = '#621FE9';
                 }}
               >
                 <span className="font-semibold text-xl md:text-3xl lg:text-[37px] leading-tight" style={{ color: '#621FE9', transition: 'color 0.3s ease-in-out' }}>
@@ -206,15 +206,12 @@ export default function Index() {
         </section>
 
         {/* Services Section */}
-        <section
-          id="services"
-          className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20"
-        >
-          <div className="max-w-[1400px] border-2 rounded-[70px] bg-white hover:shadow-lg" style={{ borderColor: '#621FE9', transition: 'box-shadow 0.3s ease-in-out' }}>
+        <section id="services" className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20">
+          <div className="max-w-[1400px] mx-auto">
             <div className="border-3 rounded-[71px] p-8 md:p-12 lg:p-16" style={{ borderColor: 'rgba(98, 31, 233, 0.4)' }}>
               <div className="flex flex-col items-center gap-8">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full ">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 w-full">
                   <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
                     Our Services
                   </h2>
@@ -252,10 +249,7 @@ export default function Index() {
         </section>
 
         {/* About Us Section */}
-        <section
-          id="about"
-          className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20"
-        >
+        <section id="about" className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20">
           <div className="max-w-[1400px] mx-auto">
             <div className="flex flex-col gap-6">
               <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
@@ -272,35 +266,32 @@ export default function Index() {
               </p>
             </div>
 
-            {/* Testimonials */}
-            <div className="mt-12 md:mt-20 flex flex-col items-center gap-8">
-              <div className="flex flex-col lg:flex-row items-center gap-8 w-full justify-center">
-                <TestimonialCard
-                  name="Name"
-                  designation="Designation"
-                  testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                />
-                <TestimonialCard
-                  name="Name"
-                  designation="Designation"
-                  testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                  featured
-                />
-                <TestimonialCard
-                  name="Name"
-                  designation="Designation"
-                  testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                />
-              </div>
-
-              {/* Carousel Indicators */}
-              <div className="flex items-center gap-2">
-                <div className="w-[158px] h-[29px] rounded-full bg-gradient-to-r from-design-cream via-gray-400 to-design-cream border-3 border-design-purple"></div>
-                <div className="w-[29px] h-[29px] rounded-full bg-design-cream border-3 border-design-purple"></div>
-                <div className="w-[29px] h-[29px] rounded-full bg-design-cream border-3 border-design-purple"></div>
-                <div className="w-[29px] h-[29px] rounded-full bg-design-cream border-3 border-design-purple"></div>
-                <div className="w-[29px] h-[29px] rounded-full bg-design-cream border-3 border-design-purple"></div>
-              </div>
+            {/* Testimonials Carousel */}
+            <div className="mt-12 md:mt-20">
+              <TestimonialsCarousel
+                items={[
+                  {
+                    name: "Name",
+                    designation: "Designation",
+                    testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                  },
+                  {
+                    name: "Name 2",
+                    designation: "Designation 2",
+                    testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                  },
+                  {
+                    name: "Name 3",
+                    designation: "Designation 3",
+                    testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                  },
+                  {
+                    name: "Name 4",
+                    designation: "Designation 4",
+                    testimonial: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                  },
+                ]}
+              />
             </div>
           </div>
         </section>
@@ -311,7 +302,7 @@ export default function Index() {
             <div className="relative inline-block">
               <h2 className="text-gray-800 font-extrabold text-4xl md:text-6xl lg:text-[101px] leading-tight">
                 Keep creating until you find your own{" "}
-                <span className="text-design-purple">audience.</span>
+                <span style={{ color: '#621FE9' }}>audience.</span>
               </h2>
               <div className="absolute top-0 left-[15%] md:left-[20%] w-[200px] md:w-[300px] lg:w-[446px] h-[60px] md:h-[90px] lg:h-[126px] border-4 border-design-yellow rounded-[43px] -z-10"></div>
             </div>

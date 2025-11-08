@@ -5,11 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font for headings - Stalions alternative using a decorative font */
+/* Import Stalions font (only for specific use, not default) */
 @font-face {
   font-family: "Stalions";
-  src: local("Cooper Black"), local("Phosphate"), local("Chalkboard SE");
-  font-weight: 400;
+  src: url("/fonts/Stalions.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -94,18 +94,9 @@
     white-space: pre;
   }
 
-  /* Stalions font class for headings */
+  /* Class for applying Stalions font to specific elements */
   .font-stalions {
-    font-family:
-      "Cooper Black",
-      "Phosphate",
-      "Chalkboard SE",
-      "Impact",
-      cursive,
-      -apple-system,
-      Roboto,
-      Helvetica,
-      sans-serif;
+    font-family: "Stalions", cursive, -apple-system, Roboto, Helvetica, sans-serif;
     font-weight: 400;
     text-transform: lowercase;
   }
