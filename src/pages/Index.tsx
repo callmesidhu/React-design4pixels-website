@@ -252,7 +252,7 @@ export default function Index() {
         <section id="about" className="px-4 md:px-16 py-12 md:py-20 mt-12 md:mt-20">
           <div className="max-w-[1400px] mx-auto">
             <div className="flex flex-col gap-6">
-              <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px] leading-tight" style={{ color: '#621FE9' }}>
+              <h2 className="font-stalions text-4xl md:text-6xl lg:text-[135px]" style={{ color: '#621FE9' }}>
                 About Us
               </h2>
               <p className="font-medium text-lg md:text-2xl lg:text-[30px] leading-relaxed text-justify" style={{ color: '#621FE9' }}>
